@@ -6,6 +6,9 @@
 
 using namespace std;
 
+// https://www.geeksforgeeks.org/dsa/merge-sort/
+// merge sort implementation
+
 // Merges two subarrays of arr[].
 // First subarray is arr[left..mid]
 // Second subarray is arr[mid+1..right]
@@ -84,7 +87,8 @@ int main(int argc, char const *argv[])
     std::clock_t start_time = std::clock();
     for (int i = 0; i < 1000; i++)
     {
-        mergeSort(arr, 0, arr.size() - 1);
+        vector<int> copy = arr;
+        mergeSort(copy, 0, copy.size() - 1);
     }
     std::clock_t tot_time = std::clock() - start_time;
     std::cout << "Time: "
